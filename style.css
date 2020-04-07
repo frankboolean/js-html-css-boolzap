@@ -79,9 +79,8 @@ input{
 
 
 .msg-up{
-  width: 84%;
+  max-width: 100%;
   background-color: gainsboro;
-  position: absolute;
   display: flex;
   justify-content: space-between;
 }
@@ -96,14 +95,25 @@ input{
 
 
 .central{
-  width: 120%;
+
   background-image: url("img/sfondo.jpg");
-  padding: 240px;
+  height: 80%;
 
 }
 
 .footer{
-  width: 120%;
+
   background-color: grey;
   padding: 12px;
+  height: 10%;
+
+}
+
+.dentro{
+  list-style-type: none;
+  font-size: 25px;
+  margin-left: 350px;
+  background-color: lightgreen;
+  border-radius: 30px;
+  max-width: 270px;
 }
