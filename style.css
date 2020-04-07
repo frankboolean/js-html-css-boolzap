@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: silver;
+}
+
+
+img{
+  width: 45px;
+  border-radius: 30px;
+}
+
+input{
+ width: 90%;
+}
+
+
+.up-bar{
+  width: 100%;
+  height: 100px;
+  background-color: mediumaquamarine;
+  position: relative;
+}
+
+.main-box{
+  display: flex;
+  position: absolute;
+  margin-top: 25px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.col-left{
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+
+  }
+
+.search{
+  background-color: white;
+}
+
+.fa-bell-slash{
+  background-color: white;
+  border-radius: 20px;
+}
+
+.blu{
+  display: flex;
+  background-color: mediumturquoise;
+  height: 80px;
+  border: 1px solid black;
+}
+
+.prima{
+  background-color: gainsboro;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.msg1{
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* colonna destra */
+
+.col-right{
+  width: 70%;
+}
+
+
+.msg-up{
+  width: 84%;
+  background-color: gainsboro;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.msg-up img{
+  float: left;
+}
+
+.col-left img{
+  float: left;
+}
+
+
+.central{
+  width: 120%;
+  background-image: url("img/sfondo.jpg");
+  padding: 240px;
+
+}
+
+.footer{
+  width: 120%;
+  background-color: grey;
+  padding: 12px;
+}
