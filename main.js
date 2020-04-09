@@ -26,20 +26,20 @@ $(document).ready(function(){
 
     // regisro un evento che gestisce la pressione dei tasti sul campo di ricerca
       // dentro la gestione dell'evento faccio la mia ricerca
-    $("#cercami").keypress(function() {
+    $("#cercami").keyup(function() {
 
       console.log("1");
 
 // otteniamo il valore da filratre
-      var aggiungi= $("#cercami").val();
+      var aggiungi= $("#cercami").val().toLowerCase();
 
       $(".msg1").each(function(){
 
-        
+
 
         // verificahiamo se il valore da filtrare è contenuto nel nome della persona
 
-        var nomeDellElemento = $(this).find(".contact").text();
+        var nomeDellElemento = $(this).find(".contact").text().toLowerCase();
         // aggiungi potrebbe valere da esempio mar
 
 

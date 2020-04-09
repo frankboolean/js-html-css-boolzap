@@ -96,15 +96,16 @@ input{
 .central{
 
   background-image: url("img/sfondo.jpg");
-  height: 80%;
+  padding: 205px;
 
 }
 
 .footer{
-
+  display: flex;
   background-color: grey;
   padding: 12px;
   height: 10%;
+  justify-content: space-between;
 
 }
 
@@ -116,7 +117,7 @@ input{
   border-radius: 30px;
   max-width: 270px;
   border: 1px solid black;
-  
+
 }
 
 .risp{
@@ -128,5 +129,14 @@ input{
   max-width: 270px;
   background-color: white;
   margin-top: 5px;
+
+}
+
+@media screen and (max-width: 720px){
+
+  .central{
+    padding:100px;
+    padding-bottom: 310px;
+  }
 
 }
