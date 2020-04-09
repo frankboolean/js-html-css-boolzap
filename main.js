@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    var contenitore = $("ul");
+    var contenitore = $(".central");
     var bottone= $("#freccia");
     var risposta= "ok";
 
@@ -9,13 +9,13 @@ $(document).ready(function(){
 
       function(){
         var input= $("#scrivi").val();
-        contenitore.append("<li class=\"dentro\">" + input + "</li>");
+        contenitore.append("<span class=\"testodom\">" + input + "</span>");
         $("#scrivi").val("");
 
         function inviaMessaggioRisposta() {
           // farà qualcosa
           console.log("messaggio inviato");
-          contenitore.append("<li class= \"risp\">" + risposta + "</li>");
+          contenitore.append("<span class= \"testorisp\">" + risposta + "</span>");
         }
 
         setTimeout(inviaMessaggioRisposta, 1000);
@@ -56,17 +56,6 @@ $(document).ready(function(){
       });
 
     });
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -95,9 +95,8 @@ input{
 
 .central{
 
+  height: 65vh;
   background-image: url("img/sfondo.jpg");
-  padding: 205px;
-
 }
 
 .footer{
@@ -109,34 +108,31 @@ input{
 
 }
 
-.dentro{
-  list-style-type: none;
-  font-size: 25px;
-  margin-left: 350px;
+/* messaggi */
+.central{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.testodom{
+  min-width: 20%;
+	max-width: 60%;
+	background: #fff;
+	border-radius: 10px;
+	font-size: 25px;
+  margin-right: 200px;
+  margin-top: 15px;
+
+}
+
+.testorisp{
+  margin-top: 15px;
+  min-width: 20%;
+  max-width: 60%;
   background-color: lightgreen;
-  border-radius: 30px;
-  max-width: 270px;
-  border: 1px solid black;
-
-}
-
-.risp{
-  list-style-type: none;
-  margin-left: 300px;
+  border-radius: 10px;
   font-size: 25px;
-  border: 1px solid black;
-  border-radius: 30px;
-  max-width: 270px;
-  background-color: white;
-  margin-top: 5px;
-
-}
-
-@media screen and (max-width: 720px){
-
-  .central{
-    padding:100px;
-    padding-bottom: 310px;
-  }
+  margin-right: 50px;
 
 }
