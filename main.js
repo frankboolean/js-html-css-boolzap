@@ -1,13 +1,14 @@
 $(document).ready(function(){
 
-    var contenitore = $(".central");
+
     var bottone= $("#freccia");
     var risposta= "ok";
-
+    var contenitore = $(".central.active");
 
     bottone.click(
 
       function(){
+
         var input= $("#scrivi").val();
         contenitore.append("<span class=\"testodom\">" + input + "</span>");
         $("#scrivi").val("");
@@ -68,6 +69,21 @@ $(document).ready(function(){
       $(this).css("background-color","white");
     }
   );
+
+  // milestone 3
+
+  $(".msg1").click(
+    function(){
+      var data= $(this).data("conversazione");
+      console.log(data);
+      $(".msg1").removeClass("active");
+
+      $(this).addClass("active");
+      $(".central").removeClass("active");
+      $(".central").eq(data).addClass("active");
+
+    }
+  )
 
 
 });

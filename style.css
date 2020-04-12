@@ -93,29 +93,35 @@ input{
 }
 
 
-.central{
-
-  height: 65vh;
-  background-image: url("img/sfondo.jpg");
-}
 
 .footer{
+  width:100%;
   display: flex;
   background-color: grey;
   padding: 12px;
   height: 10%;
   justify-content: space-between;
+  display: block;
 
 }
 
 /* messaggi */
 .central{
+  width: 100%;
+  height: 65vh;
+  background-image: url("img/sfondo.jpg");
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  display: none;
+}
+
+.central.active{
+  display: block;
 }
 
 .testodom{
+
   min-width: 20%;
 	max-width: 60%;
 	background: #fff;
@@ -127,12 +133,13 @@ input{
 }
 
 .testorisp{
+
   margin-top: 15px;
   min-width: 20%;
   max-width: 60%;
   background-color: lightgreen;
   border-radius: 10px;
   font-size: 25px;
-  margin-right: 50px;
-
 }
+
+.delete
