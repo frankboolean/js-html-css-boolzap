@@ -123,25 +123,31 @@ display: block;
 }
 
 .testodom{
-float: left;
+
 min-width: 20%;
 max-width: 60%;
 background: #fff;
 border-radius: 10px;
 font-size: 15px;
+margin:5px;
 
 
 }
 
 .testorisp{
-float: right;
 min-width: 20%;
 max-width: 60%;
 background-color: lightgreen;
 border-radius: 10px;
 font-size: 15px;
+margin-left: 200px;
 }
 
 .domanda{
+  display: flex;
+  width: 100%;
+}
+
+.risposta{
   display: flex;
 }

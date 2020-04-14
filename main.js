@@ -11,13 +11,13 @@ $(document).ready(function(){
       function(){
         var chatActive = $(".central.active");
         var input= $("#scrivi").val();
-        chatActive.append("<span class=\"testodom\">" + input + "</span>");
+        chatActive.append("<div class=\"domanda\"><span class=\"testodom\">" + input + "</span></div>");
         $("#scrivi").val("");
 
         function inviaMessaggioRisposta() {
           // farà qualcosa
           console.log("messaggio inviato");
-          chatActive.append("<span class= \"testorisp\">" + risposta + "</span>");
+          chatActive.append("<div class=\"domanda\"><span class= \"testorisp\">" + risposta + "</span></div>");
         }
 
         setTimeout(inviaMessaggioRisposta, 1000);
