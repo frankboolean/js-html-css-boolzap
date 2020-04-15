@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <title>whatsapp</title>
   </head>
@@ -94,7 +95,13 @@
         </div>
         <div class="central active ">
           <div class="domanda">
-            <span class="testodom"></span>
+            <span class="testodom">Ciao Lara come stai?</span>
+            <i class="fa fa-chevron-down f-right message-options"></i>
+            <div class="cancellamsg">
+              <div class="destroy">
+                cancella messaggio
+              </div>
+            </div>
           </div>
           <div class="risposta">
             <span class="testorisp"></span>
@@ -104,7 +111,6 @@
         <div class="central">
           <div class="domanda">
             <span class="testodom">tutto ok?</span>
-            <span<i class="fa fa-chevron-down arrow"></i></span>
           </div>
           <div class="risposta">
             <span class="testorisp"></span>
@@ -182,6 +188,21 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script id="msgInviati-template" type="text/x-handlebars-template">
+			<div class= "domanda">
+      <span class= "testodom">{{inputPh}}</span>
+      </div>
+		</script>
+
+    <!-- risposta -->
+
+    <script id="msgRicevuti-template" type="text/x-handlebars-template">
+			<div class="domanda">
+      <span class= "testorisp">{{"rispPh"}}</span>
+     </div>
+		</script>
 
 
 
@@ -191,7 +212,6 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

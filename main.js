@@ -11,13 +11,35 @@ $(document).ready(function(){
       function(){
         var chatActive = $(".central.active");
         var input= $("#scrivi").val();
-        chatActive.append("<div class=\"domanda\"><span class=\"testodom\">" + input + "</span></div>");
-        $("#scrivi").val("");
+        // handlebars
+        var source = $("#msgInviati-template").html();
+        var template = Handlebars.compile(source);
+        // ....
+
+        var context = { "inputPh": input };
+        var html = template(context);
+        chatActive.append(html)
+
+        // append
+        // chatActive.append("<div class=\"domanda\"><span class=\"testodom\">" + input + "</span></div>");
+        // $("#scrivi").val("");
+
+
 
         function inviaMessaggioRisposta() {
+
+          // handlebars inviaMessaggioRisposta
+
+          var source = $("#msgRicevuti-template").html();
+          var template = Handlebars.compile(source);
+          // ....
+          var contexRisp = { "rispPh": risposta };
+          var html = template(contexRisp);
+          chatActive.append(html)
+
           // farà qualcosa
-          console.log("messaggio inviato");
-          chatActive.append("<div class=\"domanda\"><span class= \"testorisp\">" + risposta + "</span></div>");
+          // console.log("messaggio inviato");
+          // chatActive.append("<div class=\"domanda\"><span class= \"testorisp\">" + risposta + "</span></div>");
         }
 
         setTimeout(inviaMessaggioRisposta, 1000);
@@ -87,14 +109,20 @@ $(document).ready(function(){
 
   // freccina cancella
 
-  var freccina = $(".arrow");
-  var cancella = $(".cancella");
+  function showMessage () {
+    var inst= $(this).closest(".domanda");
+    inst.siblings(".domanda").find(".cancellamsg").removeClass("active");
+    inst.find(".cancellamsg").toggleClass("active")
+  }
 
-  freccina.click(
-    function(){
-      $(".testodom").toggle()
-    }
-  )
+  function distruggi(){
+    var inst= $(this).closest(".domanda");
+    inst.remove()
+  }
+
+  // handlebars....
+
+
 
 
 });
